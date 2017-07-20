@@ -1,4 +1,4 @@
-package com.github.jabbalaci.graphviz;
+package com.github.dounets.graphviz;
 
 import java.io.File;
 
@@ -8,7 +8,7 @@ public class Proba
 	{
 		Proba p = new Proba();
 		p.start();
-//		p.start2();
+		p.start2();
 	}
 
 	/**
@@ -52,8 +52,7 @@ public class Proba
 		// 		String repesentationType= "twopi";
 		// 		String repesentationType= "circo";
 		
-		File out = new File("D:/Project/ML/Graphiviz/graphviz-java-api/tmp/out"+gv.getImageDpi()+"."+ type);   // Linux
-		//      File out = new File("c:/eclipse.ws/graphviz-java-api/out." + type);    // Windows
+		File out = new File("D:/Project/ML/Graphiviz/graphviz-java-api/tmp/out"+gv.getImageDpi()+"."+ type);   // Windows
 		gv.writeGraphToFile( gv.getGraph(gv.getDotSource(), type, repesentationType), out );
 	}
 
@@ -63,21 +62,19 @@ public class Proba
 	 */
 	private void start2()
 	{
-		String dir = "/home/jabba/Dropbox/git.projects/laszlo.own/graphviz-java-api";     // Linux
-		String input = dir + "/sample/simple.dot";
-		//	   String input = "c:/eclipse.ws/graphviz-java-api/sample/simple.dot";    // Windows
-
+		String dir = "D:/Project/ML/Graphiviz/graphviz-java-api";
+		String input = dir + "/sample/file2.dot";
 		GraphViz gv = new GraphViz();
 		gv.readSource(input);
 		System.out.println(gv.getDotSource());
 
-		String type = "gif";
+		//String type = "gif";
 		//    String type = "dot";
 		//    String type = "fig";    // open with xfig
 		//    String type = "pdf";
 		//    String type = "ps";
 		//    String type = "svg";    // open with inkscape
-		//    String type = "png";
+		    String type = "png";
 		//      String type = "plain";
 		
 		
@@ -88,8 +85,7 @@ public class Proba
 		// 		String repesentationType= "twopi";
 		//		String repesentationType= "circo";
 		
-		File out = new File("/tmp/simple." + type);   // Linux
-		//	   File out = new File("c:/eclipse.ws/graphviz-java-api/tmp/simple." + type);   // Windows
+		File out = new File("D:/Project/ML/Graphiviz/graphviz-java-api/tmp/simple." + type);
 		gv.writeGraphToFile( gv.getGraph(gv.getDotSource(), type, repesentationType), out );
 	}
 }

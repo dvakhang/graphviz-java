@@ -1,4 +1,4 @@
-package com.github.jabbalaci.graphviz;
+package com.github.dounets.graphviz;
 
 // GraphViz.java - a simple API to call dot from Java programs
 
